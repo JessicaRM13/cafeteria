@@ -48,9 +48,6 @@
             series: [{
                 name: 'Total Ventas',
                 data: {!! json_encode($importes) !!}
-            }, {
-                name: 'Total Ganancias',
-                data: {!! json_encode($ganancias) !!}
             }]
         });
     });

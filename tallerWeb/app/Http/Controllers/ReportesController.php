@@ -26,7 +26,7 @@ class ReportesController extends Controller
         $sucursales = Sucursales::where('estado', true)->get();
         $query = "
         SELECT 
-    telas_sucursales.idtela, 
+    productos_sucursales.idtela, 
     t.nombre as tela, 
     telas_sucursales.idsucursal, 
     s.direccion as sucursal, 

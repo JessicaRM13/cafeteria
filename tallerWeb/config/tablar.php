@@ -224,36 +224,25 @@ return [
             ],
         ],
         [
-            'text' => 'Reportes Y Estadisticas',
+            'text' => 'Reportes y Estadisticas',
             'url' => '#',
             'icon' => 'ti ti-chart-bar',
             'active' => ['support4'],
             'can' => 'graficas.metas',
             'submenu' => [
                 [
-                    'text' => 'Ventas Por Sucursales',
+                    'text' => 'Reportes de Ventas Por Sucursal',
                     'url' => 'ventas-ganancias-sucursal',
                     'icon' => 'ti ti-chart-bar',
                     'can' => 'reportes.ventas_ganancias_sucursal',
                 ],
                 [
-                    'text' => 'Ventas Por Telas',
+                    'text' => 'Ventas Por Producto',
                     'url' => 'ventas-ganancias-telas',
                     'icon' => 'ti ti-chart-bar',
                     'can' => 'reportes.ventas_ganancias_telas',
                 ],
-                [
-                    'text' => 'Demanda De Telas',
-                    'route' => 'reportes.formdemandas',
-                    'icon' => 'ti ti-chart-bar',
-                    'can' => 'reportes.formdemandas',
-                ],
-                [
-                    'text' => 'Metas Por Vendedor',
-                    'route' => 'graficas.metas',
-                    'icon' => 'ti ti-chart-bar',
-                    'can' => 'graficas.metas',
-                ],
+                
             ],
         ],
     ],

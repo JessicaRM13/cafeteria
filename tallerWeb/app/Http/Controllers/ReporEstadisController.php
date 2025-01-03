@@ -84,22 +84,22 @@ class ReporEstadisController extends Controller
         $data = DB::table('ventas as v')
             ->join('sucursales as s', 'v.idsucursal', '=', 's.id')
             ->select('s.direccion as sucursal', 
-                     DB::raw('SUM(v.total) as total_importe'), 
-                     DB::raw('SUM(v.ganancias) as total_ganancias'))
+                     DB::raw('SUM(v.total) as total_importe')) 
+                     
             ->groupBy('s.direccion')
             ->get();
 
         $sucursales = [];
         $importes = [];
-        $ganancias = [];
+        
 
         foreach ($data as $row) {
             $sucursales[] = $row->sucursal;
             $importes[] = (float)$row->total_importe;
-            $ganancias[] = (float)$row->total_ganancias;
+           
         }
 
-        return view('reportes.ventas_ganancias_sucursal', compact('sucursales', 'importes', 'ganancias'));
+        return view('reportes.ventas_ganancias_sucursal', compact('sucursales', 'importes'));
     }
     public function ventas_ganancias_telas()
     {

@@ -10,7 +10,7 @@
                         Overview
                     </div>
                     <h2 class="page-title">
-                        Demanda De Telas
+                        Demanda Productos
                     </h2>
                 </div>
             </div>

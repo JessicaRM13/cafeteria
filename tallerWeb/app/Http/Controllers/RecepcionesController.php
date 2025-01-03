@@ -92,11 +92,11 @@ class RecepcionesController extends Controller
         
         $periodo = $periodo * 0.857143; // aqui se le corta al periodo porque no se atiende los domingos        
 
-        //Calcular la demanda histórica de la producto
-        $historialDeDemanda = DetVentas::where('idproducto', $detcompra->idproducto)->sum('cantidad'); // 500mts
+        //Calcular la demanda histórica de producto
+        $historialDeDemanda = DetVentas::where('idproducto', $detcompra->idproducto)->sum('cantidad'); // 500
 
-        //Calcular la demanda promedio de la producto
-        $demandaPromedio = $historialDeDemanda / $periodo; //500 / 7 = 71 mts/dia
+        //Calcular la demanda promedio de producto
+        $demandaPromedio = $historialDeDemanda / $periodo; //500 / 7 = 71 /dia
 
         $producto = Productos::find($detcompra->idproducto);
         // Calcular el punto de reorden de la producto

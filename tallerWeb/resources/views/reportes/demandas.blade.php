@@ -70,7 +70,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Demanda De Telas Por Sucursal'
+                text: 'Demanda De Productos Por Sucursal'
             },
             xAxis: {
                 type: 'category'
